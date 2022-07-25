@@ -10,6 +10,8 @@ if(NOT CMAKE_CXX_STANDARD)
     set(CMAKE_CXX_STANDARD_REQUIRED ON)
 endif()
 
+add_definitions(-D_GLIBCXX_USE_CXX11_ABI=0)
+
 # Prevent in source builds
 if(EXISTS "${PROJECT_BINARY_DIR}/CMakeLists.txt")
     message(FATAL_ERROR "Source build detected: please use a subdir. You may remove 'CMakeCache.txt' and 'CMakeFiles'.")
